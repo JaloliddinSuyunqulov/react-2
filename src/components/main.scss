@@ -1,0 +1,475 @@
+//************************* ICONS ************************//
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  background-color: black;
+  vertical-align: sub;
+
+  &.icon-ECMA {
+    mask-image: url('../assets/icons/ECMA.png');
+    -webkit-mask-image: url('../assets/icons/ECMA.png');
+  }
+
+  &.icon-Aif {
+    mask-image: url('../assets/icons/Aif.png');
+    -webkit-mask-image: url('../assets/icons/Aif.png');
+  }
+}
+
+//************************* COLORS ***********************//
+$deep-green: #003846;
+$grey-color: #F8F8FA;
+
+//********************** MAIN STYLES **********************//
+
+body {
+  #navigation-bar {
+    .logo{
+      width: 100px;
+      height: 38px !important;
+    }
+
+    .course-dropdown {
+      color: black;
+      font-weight: 500;
+    }
+
+    .dropdown-item {
+      &:active {
+        background-color: #003846;
+      }
+    }
+  }
+
+  #online-academy {
+    background-color: $deep-green;
+    height: 794px;
+    position: relative;
+
+    .academy-header {
+      margin-top: 120px;
+      font-weight: 700;
+      font-size: 5vw;
+    }
+
+    .academy-content {
+      font-size: 24px;
+    }
+
+    .academy-courses {
+      position: absolute;
+      bottom: -252px;
+      left: 0;
+      right: 0;
+
+      .course-card-bg {
+        background-color: $grey-color;
+        border: 1px solid white;
+        transition: 0.2s linear;
+
+        &:hover {
+          background-color: #0A4958;
+          cursor: pointer;
+          color: white;
+          border: 1px solid #0A4958;
+
+          .course-card {
+            .course-card-content {
+              color: white;
+            }
+
+            span {
+              display: block !important;
+            }
+          }
+        }
+
+        .course-card {
+          padding: 30px;
+          font-size: 24px;
+          height: 250px;
+
+          .course-card-content {
+            color: dimgray;
+            padding-right: 100px;
+
+            span {
+              display: none;
+            }
+          }
+
+          img {
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  #courses {
+    margin-top: 350px;
+
+    h2 {
+      font-weight: 400;
+    }
+
+    .table {
+      min-width: 1110px;
+      overflow-x: scroll;
+
+      thead {
+        th {
+          text-align: center;
+        }
+      }
+
+      tbody {
+        tr {
+          color: dimgray;
+          font-weight: 500;
+
+          td {
+            padding: 20px 0;
+            text-align: center;
+
+            &:first-child {
+              color: black;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            td {
+              color: white !important;
+
+              span {
+                background-color: white;
+              }
+            }
+
+            background-color: $deep-green;
+          }
+        }
+      }
+    }
+  }
+
+  #teaching-style {
+    h2 {
+      font-weight: 400;
+    }
+
+    .col {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+
+      .teaching-style-item {
+        margin-top: 30px;
+        background-color: #0A4958;
+        border-radius: 50%;
+        width: 190px;
+        height: 190px;
+        display: flex;
+        align-items: center;
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: $grey-color;
+  }
+
+  #students-about-us {
+    padding-top: 60px;
+
+    h2 {
+      font-weight: 400;
+    }
+
+    .carousel-ideas {
+      position: relative;
+
+      .carousel-content {
+        padding: 40px 35% 70px 40px;
+        width: 80%;
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .carousel-image {
+        img {
+          height: 300px;
+        }
+
+        position: absolute;
+        right: calc(20% - 150px);
+        top: calc(50% - 150px);
+      }
+
+      .carousel-image-mobile {
+        display: none;
+      }
+    }
+
+    .slick-dots {
+      left: 60px;
+      bottom: 20px;
+      text-align: unset;
+
+      li {
+        button {
+          &:before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px black solid;
+          }
+        }
+      }
+
+      .slick-active {
+        button {
+          &:before {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+
+  #our-students {
+    margin-top: 70px;
+
+    h2 {
+      font-weight: 400;
+    }
+
+    .col {
+      display: flex;
+      justify-content: center;
+
+      img {
+        margin-top: 30px;
+        width: 150px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+  #home-footer {
+    margin-top: 100px;
+
+    .footer-titles {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  .profile-page {
+    background-color: $grey-color;
+
+    #mentor-card {
+      background-color: white;
+      padding: 30px 25px 20px 25px;
+
+      .mentor-name {
+        div:first-child {
+          font-size: 14px;
+        }
+
+        div:last-child {
+          font-size: 10px;
+          color: grey;
+        }
+      }
+
+      .line {
+        height: 2px;
+        margin-top: 30px;
+        width: 100%;
+        transform: scale(1.2);
+        background-color: $grey-color;
+      }
+
+      .mentor-duration{
+        color: dimgray;
+        font-size: 14px;
+      }
+    }
+
+    #course-video-list{
+      h2 {
+        min-width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h5 {
+        padding-right: 150px;
+      }
+      .course-collapse{
+        background-color: white;
+        padding: 20px 20px 10px 20px;
+        cursor: pointer;
+        margin-bottom: 0 !important;
+        .rotate-arrow{
+          transform: rotate(180deg);
+        }
+      }
+
+      .opacity{
+        opacity: 0.7;
+      }
+
+      .course-video-content{
+        background-color: white;
+        padding: 20px 40px 20px 20px;
+        .watched{
+          color: dimgrey;
+          font-size: 12px;
+          width: 12%;
+        }
+        .course-image{
+          margin-left: 10px;
+          margin-right: 20px;
+          width: 16%;
+          position: relative;
+          .course-video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            img{
+              width: 50%;
+            }
+          }
+          &:hover{
+            .course-video{
+              display: flex;
+              cursor: pointer;
+            }
+          }
+        }
+        .course-name{
+          line-height: 18px;
+          img{
+            width: 18px;
+          }
+          div:first-child{
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .line{
+        height: 2px;
+        width: 100%;
+        background-color: $grey-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    #online-academy {
+
+      .academy-header {
+        margin-top: 30px;
+      }
+
+      .academy-content {
+        font-size: 18px;
+      }
+
+      .academy-courses {
+        bottom: -504px;
+      }
+    }
+
+    #courses {
+      margin-top: 600px;
+    }
+
+    #students-about-us {
+      overflow: hidden;
+      .carousel-ideas {
+        .carousel-content {
+          padding: 30px;
+          width: 100%;
+        }
+      }
+
+      .carousel-image {
+        display: none;
+      }
+
+      .carousel-image-mobile {
+        display: block !important;
+      }
+    }
+
+    #home-footer {
+      .footer-titles {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #online-academy {
+    .academy-header {
+      font-size: 30px !important;
+    }
+
+    .academy-courses {
+      .course-card-content {
+        padding-right: 20px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  body {
+    #online-academy {
+
+      .course-card-content {
+        padding-right: 20px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #online-academy {
+    .academy-header {
+      font-size: 80px !important;
+    }
+  }
+}
